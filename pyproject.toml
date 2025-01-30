@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "django-vite-starter"
+name = "final-project"
 version = "0.1.0"
 description = ""
 authors = ["Joseph Ditton <jditton.atomic@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 django = "^5.0.0"
 requests = "^2.31.0"
 python-dotenv = "^1.0.0"

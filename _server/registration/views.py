@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
+from core.models import Preference
 from django.http import JsonResponse
 
 # Create your views here.
@@ -14,6 +15,8 @@ def sign_up(req):
             last_name=req.POST.get("last_name")
         )
         login(req, user)
+        setttings = Preference( user = user)
+        setttings.save()
         return redirect("/")
     else:
         return render(req, "registration/sign_up.html")
